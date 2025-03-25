@@ -7,29 +7,30 @@
   font-weight: 600;
   %tooltipContent {
     padding: 0;
+    color: hsla(0, 0%, 100%, 0.9);
   }
   &%tooltipPrimary,
   &%tooltipNested {
     background: rgba(0, 0, 0, 0.9);
-    > %tooltipPointer {
+    %tooltipPointer {
       border-top-color: rgba(0, 0, 0, 0.9);
     }
   }
   &%tooltipBrand {
     background: $main-color;
-    > %tooltipPointer {
+    %tooltipPointer {
       border-top-color: $main-color;
     }
   }
   &%tooltipRed {
     background: cv('colors.danger');
-    > %tooltipPointer {
+    %tooltipPointer {
       border-top-color: cv('colors.danger');
     }
   }
   &%tooltipGreen {
     background: cv('colors.success');
-    > %tooltipPointer {
+    %tooltipPointer {
       border-top-color: cv('colors.success');
     }
   }
@@ -61,10 +62,13 @@
 }
 
 // UPSELL
-%upsellTooltipText {
+%upsellTooltip {
   background-color: hsla(0, 0%, 0%, 0.8);
   &%upsellTooltipCaretTopCenter:after {
     border-bottom-color: hsla(0, 0%, 0%, 0.8);
+  }
+  &%upsellTooltipCaretRightCenter:after {
+    border-left-color: hsla(0, 0%, 0%, 0.8);
   }
 }
 
